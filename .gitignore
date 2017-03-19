@@ -1,0 +1,11 @@
+.gradle
+/local.properties
+/gradle.properties
+.DS_Store
+/build
+/captures
+**.iml
+/.idea
+sdcard
+sdcard.lock
+libs/
