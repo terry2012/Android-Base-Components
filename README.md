@@ -2,9 +2,12 @@
 Utilities that are used to develop and maintain android applications following the clean principles
 
 
-## Presentation
 
-Create a new Activity 
+## View
+
+Toolkit provides classes to represent the main components of the Presentation layer like BaseActivity, BaseFragment or BasePresenter.
+
+Create a new **Activity**
 
 ```java 
 
@@ -12,6 +15,21 @@ public class SampleActivity extends BaseActivity {
 
   @Override protected int getLayoutId() {
     return R.layout.sample_activity;
+  }
+}
+```
+
+Create a new **Fragment**
+
+```java
+public class SampleFragment extends BaseFragment {
+
+  public static SampleFragment newInstance() {
+    return new SampleFragment();
+  }
+
+  @Override protected int getLayoutId() {
+    return R.layout.sample_fragment;
   }
 }
 ```
