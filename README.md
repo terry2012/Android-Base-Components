@@ -3,9 +3,9 @@ Utilities that are used to develop and maintain android applications following t
 
 
 
-## View
+## [View Package](https://github.com/erikcaffrey/Android-Toolkit-Base-Components/tree/master/base-components/src/main/java/erikjhordanrey/base_components/view)
 
-Toolkit provides classes to represent the main components of the Presentation layer like BaseActivity, BaseFragment or BasePresenter.
+Base Components provides classes to represent the main components normally used on Presentation layer like BaseActivity, BaseFragment, BasePresenter.
 
 Create a new **Activity**
 
