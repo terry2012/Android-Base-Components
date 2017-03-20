@@ -1,3 +1,4 @@
+# This project is in PROGRESS!!!
 # Android-Toolkit-Base-Components
 Utilities that are used to develop and maintain android applications following the clean principles
 
