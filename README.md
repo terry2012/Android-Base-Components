@@ -6,7 +6,7 @@ Utilities that are used to develop and maintain android applications following t
 
 ## [View Package](https://github.com/erikcaffrey/Android-Toolkit-Base-Components/tree/master/base-components/src/main/java/erikjhordanrey/base_components/view)
 
-Provides classes to represent the main components normally used on Presentation layer like BaseActivity, BaseFragment, BasePresenter.
+Provides classes to represent the main components normally used on Presentation layer like [BaseActivity](https://github.com/erikcaffrey/Android-Toolkit-Base-Components/blob/master/base-components/src/main/java/erikjhordanrey/base_components/view/BaseActivity.java), [BaseFragment](https://github.com/erikcaffrey/Android-Toolkit-Base-Components/blob/master/base-components/src/main/java/erikjhordanrey/base_components/view/BaseFragment.java), [BasePresenter](https://github.com/erikcaffrey/Android-Toolkit-Base-Components/blob/master/base-components/src/main/java/erikjhordanrey/base_components/view/BasePresenter.java).
 
 Create a new **Activity**
 
