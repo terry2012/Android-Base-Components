@@ -33,7 +33,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
   @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(getLayoutId());
+    setContentView(getLayoutResId());
     initializeSupportActionBar();
     initializeArguments(savedInstanceState);
     initializePresenter();
@@ -105,7 +105,7 @@ public abstract class BaseActivity extends AppCompatActivity {
    * @return the layout id associated to the layout used in the activity.
    */
 
-  @LayoutRes protected abstract int getLayoutId();
+  @LayoutRes protected abstract int getLayoutResId();
 
   public Bundle getActivityArguments() {
     return activityArguments;

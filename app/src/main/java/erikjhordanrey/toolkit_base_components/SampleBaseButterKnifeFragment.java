@@ -26,7 +26,7 @@ public class SampleBaseButterKnifeFragment extends BaseFragment {
 
   private Unbinder unbinder;
 
-  @Override protected int getLayoutId() {
+  @Override protected int getLayoutResId() {
     return R.layout.sample_activity;
   }
 

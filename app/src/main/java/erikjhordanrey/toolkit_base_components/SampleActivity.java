@@ -22,7 +22,7 @@ import io.reactivex.observers.DisposableObserver;
 
 public class SampleActivity extends BaseActivity {
 
-  @Override protected int getLayoutId() {
+  @Override protected int getLayoutResId() {
     return R.layout.sample_activity;
   }
 

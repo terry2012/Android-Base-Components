@@ -53,7 +53,7 @@ public abstract class BaseFragmentActivity extends BaseActivity {
    * @return the layout id associated to the layout used in the fragment.
    */
 
-  @Override @LayoutRes protected int getLayoutId() {
+  @Override @LayoutRes protected int getLayoutResId() {
     return R.layout.default_container;
   }
 

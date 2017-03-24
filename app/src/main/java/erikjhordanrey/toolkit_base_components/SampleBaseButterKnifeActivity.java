@@ -21,7 +21,7 @@ import erikjhordanrey.base_components.view.BaseActivity;
 
 public class SampleBaseButterKnifeActivity extends BaseActivity {
 
-  @Override protected int getLayoutId() {
+  @Override protected int getLayoutResId() {
     return R.layout.sample_activity;
   }
 

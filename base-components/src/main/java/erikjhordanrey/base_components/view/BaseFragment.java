@@ -39,7 +39,7 @@ public abstract class BaseFragment extends Fragment implements Presenter.Ui {
   @Nullable @Override
   public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
       @Nullable Bundle savedInstanceState) {
-    return inflater.inflate(getLayoutId(), container, false);
+    return inflater.inflate(getLayoutResId(), container, false);
   }
 
   @Override public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
@@ -71,7 +71,7 @@ public abstract class BaseFragment extends Fragment implements Presenter.Ui {
    * @return the layout id associated to the layout used in the fragment.
    */
 
-  @LayoutRes protected abstract int getLayoutId();
+  @LayoutRes protected abstract int getLayoutResId();
 
   /**
    * @return hasMenu If true, the fragment has menu items to contribute.
