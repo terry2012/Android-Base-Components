@@ -23,6 +23,11 @@ dependencies {
 
   compile supportDependencies.appCompat
   compile supportDependencies.design
+
   compile rxDependencies.rxJava
   compile rxDependencies.rxAndroid
+
+  compile squareDependencies.retrofit
+  compile squareDependencies.gsonConverter
+  compile squareDependencies.okHttp
 }

@@ -14,7 +14,7 @@ Create a new **Activity**
 
 public class SampleActivity extends BaseActivity {
 
-  @Override protected int getLayoutId() {
+  @Override protected int getLayoutResId() {
     return R.layout.sample_activity;
   }
 }
@@ -29,7 +29,7 @@ public class SampleFragment extends BaseFragment {
     return new SampleFragment();
   }
 
-  @Override protected int getLayoutId() {
+  @Override protected int getLayoutResId() {
     return R.layout.sample_fragment;
   }
 }
