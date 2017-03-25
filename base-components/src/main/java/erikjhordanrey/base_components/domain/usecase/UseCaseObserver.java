@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package erikjhordanrey.base_components.usecase;
+package erikjhordanrey.base_components.domain.usecase;
 
 import io.reactivex.observers.DisposableObserver;
 
