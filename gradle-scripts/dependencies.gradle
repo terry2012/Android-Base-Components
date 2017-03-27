@@ -24,10 +24,11 @@ ext{
   // Square Libraries
 
   retrofitPackage = 'com.squareup.retrofit2'
-  retrofitVersion = '2.1.0'
+  retrofitVersion = '2.2.0'
 
   okhttpPackage = 'com.squareup.okhttp3'
-  okhttpVersion = '3.4.1'
+  okhttpVersion = '3.6.0'
+
 
   picassoPackage = 'com.squareup.picasso'
   picassoVersion = '2.5.2'

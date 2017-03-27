@@ -30,4 +30,6 @@ dependencies {
   compile squareDependencies.retrofit
   compile squareDependencies.gsonConverter
   compile squareDependencies.okHttp
+  compile squareDependencies.loggingInterceptor
+
 }

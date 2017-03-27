@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+
 package erikjhordanrey.base_components.domain.usecase;
 
 import erikjhordanrey.base_components.executor.Executor;
