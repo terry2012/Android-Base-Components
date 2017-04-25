@@ -1,14 +1,47 @@
-# This project is in PROGRESS!!!
-# Android-Toolkit-Base-Components
-Utilities that are used to develop and maintain android applications following the clean principles
+# Android Base Components
 
+Base Components library are a set of utilities used on current android development.
 
+These base components are the core used normally when you start to develop an android application working with the following stack:
 
-## [View Package](https://github.com/erikcaffrey/Android-Toolkit-Base-Components/tree/master/base-components/src/main/java/erikjhordanrey/base_components/view)
+#### Principles
 
-Provides classes to represent the main components normally used on Presentation layer like [BaseActivity](https://github.com/erikcaffrey/Android-Toolkit-Base-Components/blob/master/base-components/src/main/java/erikjhordanrey/base_components/view/BaseActivity.java), [BaseFragment](https://github.com/erikcaffrey/Android-Toolkit-Base-Components/blob/master/base-components/src/main/java/erikjhordanrey/base_components/view/BaseFragment.java), [BasePresenter](https://github.com/erikcaffrey/Android-Toolkit-Base-Components/blob/master/base-components/src/main/java/erikjhordanrey/base_components/view/BasePresenter.java).
+* **Model View Presenter**
+* **Clean Architecture**
+* **S.O.L.I.D**
 
-Create a new **Activity**
+#### Libraries
+
+* **Butterknife**
+* **Picasso or Glide**
+* **Retrofit**
+* **OkHttp**
+* **Dagger 2**
+* **RxJava & Rx Android**
+
+### The project is divided in different modules 
+
+* Data
+* Domain
+* Executor
+* Mapper
+* Navigation
+* View
+
+**Note:** You can use just the components necessary that you need to solve your problems, It is not mandatory to use all.
+
+# Modules
+
+## [View](https://github.com/erikcaffrey/Android-Toolkit-Base-Components/tree/master/base-components/src/main/java/erikjhordanrey/base_components/view)
+
+Provides classes to represent the components used on Presentation layer:
+
+#### Android UI - Activity & Fragment
+
+* [BaseActivity](https://github.com/erikcaffrey/Android-Toolkit-Base-Components/blob/master/base-components/src/main/java/erikjhordanrey/base_components/view/BaseActivity.java) 
+* [BaseFragment](https://github.com/erikcaffrey/Android-Toolkit-Base-Components/blob/master/base-components/src/main/java/erikjhordanrey/base_components/view/BaseFragment.java) 
+
+##### BaseActivity
 
 ```java 
 
@@ -20,7 +53,7 @@ public class SampleActivity extends BaseActivity {
 }
 ```
 
-Create a new **Fragment**
+##### BaseFragment
 
 ```java
 public class SampleFragment extends BaseFragment {
@@ -35,6 +68,51 @@ public class SampleFragment extends BaseFragment {
 }
 ```
 
+#### Model View Presenter
+
+* [BasePresenter.Ui](https://github.com/erikcaffrey/Android-Toolkit-Base-Components/blob/master/base-components/src/main/java/erikjhordanrey/base_components/view/Presenter.java)
+* [BasePresenter](https://github.com/erikcaffrey/Android-Toolkit-Base-Components/blob/master/base-components/src/main/java/erikjhordanrey/base_components/view/BasePresenter.java)
+
+##### BasePresenter.Ui
+
+```java 
+interface SampleUI extends BasePresenter.Ui {
+    // UI methods
+}
+
+```
+
+##### BasePresenter
+
+```java
+public class SamplePresenter extends BasePresenter<SampleUi> {
+
+  @Override public void initialize() {
+    super.initialize();
+  }
+
+  @Override public void resume() {
+    super.resume();
+  }
+
+  @Override public void pause() {
+    super.pause();
+  }
+
+  @Override public void stop() {
+    super.stop();
+  }
+
+  @Override public void terminate() {
+    super.terminate();
+  } 
+}
+
+```
+
+## [Domain](https://github.com/erikcaffrey/Android-Toolkit-Base-Components/tree/master/base-components/src/main/java/erikjhordanrey/base_components/domain)
+
+
 Do you want to contribute?
 --------------------------
 Feel free to report or add any useful feature, I will be glad to improve it with your help, before submitting your code please check the [codestyle](https://github.com/square/java-code-styles).
@@ -47,7 +125,7 @@ Developed By
 License
 -------
 
-    Copyright 2016 Erik Jhordan Rey
+    Copyright 2017 Erik Jhordan Rey
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
