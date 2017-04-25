@@ -20,8 +20,8 @@ import erikjhordanrey.base_components.view.BasePresenter;
 
 class SamplePresenter extends BasePresenter<SampleUi> {
 
-  @Override public void initialize() {
-    super.initialize();
+  @Override public void start() {
+    super.start();
   }
 
   @Override public void resume() {

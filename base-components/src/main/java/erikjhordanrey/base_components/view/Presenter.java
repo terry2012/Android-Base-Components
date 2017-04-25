@@ -26,7 +26,7 @@ interface Presenter<V> {
 
   boolean isViewAttached();
 
-  void initialize();
+  void start();
 
   void resume();
 

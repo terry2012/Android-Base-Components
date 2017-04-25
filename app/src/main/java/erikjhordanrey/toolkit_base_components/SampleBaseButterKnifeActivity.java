@@ -25,8 +25,8 @@ public class SampleBaseButterKnifeActivity extends BaseActivity {
     return R.layout.sample_activity;
   }
 
-  @Override protected void initializeActivity() {
-    super.initializeActivity();
+  @Override protected void initActivity() {
+    super.initActivity();
     ButterKnife.bind(this);
   }
 }

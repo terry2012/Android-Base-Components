@@ -34,10 +34,10 @@ public abstract class BaseActivity extends AppCompatActivity {
   @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(getLayoutResId());
-    initializeSupportActionBar();
-    initializeArguments(savedInstanceState);
-    initializePresenter();
-    initializeActivity();
+    initSupportActionBar();
+    initArguments(savedInstanceState);
+    initPresenter();
+    initActivity();
   }
 
   /**
@@ -45,7 +45,7 @@ public abstract class BaseActivity extends AppCompatActivity {
    * if it doesn't exist will be ignored
    */
 
-  private void initializeSupportActionBar() {
+  private void initSupportActionBar() {
     toolbar = (Toolbar) findViewById(R.id.toolbar);
     if (toolbar != null) {
       setSupportActionBar(toolbar);
@@ -63,11 +63,11 @@ public abstract class BaseActivity extends AppCompatActivity {
   }
 
   /**
-   * Called after to initialize ui state.
+   * Called after to start ui state.
    * Override this method to configure your presenter with extra data if needed.
    */
 
-  protected void initializeArguments(Bundle savedInstanceState) {
+  protected void initArguments(Bundle savedInstanceState) {
     if (savedInstanceState != null && savedInstanceState.containsKey(EXTRA_ARGUMENTS)) {
       activityArguments = savedInstanceState.getBundle(EXTRA_ARGUMENTS);
     } else if (getIntent().getExtras() != null) {
@@ -76,20 +76,20 @@ public abstract class BaseActivity extends AppCompatActivity {
   }
 
   /**
-   * Called before to initialize all the presenter instances linked to the component lifecycle.
+   * Called before to start all the presenter instances linked to the component lifecycle.
    * Override this method to configure your presenter with extra data if needed.
    */
 
-  protected void initializePresenter() {
+  protected void initPresenter() {
 
   }
 
   /**
    * Called just after setContentView.
-   * Override this method to configure your activity or initialize views
+   * Override this method to configure your activity or start views
    */
 
-  protected void initializeActivity() {
+  protected void initActivity() {
 
   }
 

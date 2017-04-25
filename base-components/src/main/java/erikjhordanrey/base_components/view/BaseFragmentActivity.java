@@ -26,16 +26,16 @@ public abstract class BaseFragmentActivity extends BaseActivity {
 
   private Fragment fragment;
 
-  @Override protected void initializeActivity() {
-    super.initializeActivity();
-    initializeFragment();
+  @Override protected void initActivity() {
+    super.initActivity();
+    initFragment();
   }
 
   /**
-   * Initialize a fragment in an Activity
+   * Initialize a fragment into an Activity
    */
 
-  private void initializeFragment() {
+  private void initFragment() {
     final FragmentManager fragmentManager = getSupportFragmentManager();
     Integer containerId = R.id.container;
     if (getContainerId() != null) {

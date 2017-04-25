@@ -26,8 +26,8 @@ public class SampleActivity extends BaseActivity {
     return R.layout.sample_activity;
   }
 
-  @Override protected void initializeActivity() {
-    super.initializeActivity();
+  @Override protected void initActivity() {
+    super.initActivity();
 
     SampleObject1 sampleObject1 = new SampleObject1();
     sampleObject1.setSampleName("Sample 1");
