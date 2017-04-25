@@ -18,7 +18,7 @@ package erikjhordanrey.toolkit_base_components;
 
 import erikjhordanrey.base_components.view.BasePresenter;
 
-class SamplePresenter extends BasePresenter<SampleView> {
+class SamplePresenter extends BasePresenter<SampleUi> {
 
   @Override public void initialize() {
     super.initialize();
