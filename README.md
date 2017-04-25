@@ -40,6 +40,7 @@ Provides classes to represent the components used on Presentation layer:
 
 * [BaseActivity](https://github.com/erikcaffrey/Android-Toolkit-Base-Components/blob/master/base-components/src/main/java/erikjhordanrey/base_components/view/BaseActivity.java) 
 * [BaseFragment](https://github.com/erikcaffrey/Android-Toolkit-Base-Components/blob/master/base-components/src/main/java/erikjhordanrey/base_components/view/BaseFragment.java) 
+* [BaseFragmentActivity](https://github.com/erikcaffrey/Android-Toolkit-Base-Components/blob/master/base-components/src/main/java/erikjhordanrey/base_components/view/BaseFragmentActivity.java) 
 
 ##### BaseActivity
 
@@ -68,6 +69,27 @@ public class SampleFragment extends BaseFragment {
 }
 ```
 
+#### BaseFragmentActivity
+
+```java
+public class SampleFragmentActivity extends BaseFragmentActivity {
+
+  @Override protected Fragment getFragmentInstance() {
+    return SampleFragment.newInstance();
+  }
+  
+  //Optional
+  @Override protected int getLayoutResId() {
+    return super.getLayoutResId();
+  }
+  
+  //Optional 
+  @Override protected Integer getContainerId() {
+    return super.getContainerId();
+  }
+}
+```
+
 #### Model View Presenter
 
 * [BasePresenter.Ui](https://github.com/erikcaffrey/Android-Toolkit-Base-Components/blob/master/base-components/src/main/java/erikjhordanrey/base_components/view/Presenter.java)
@@ -86,29 +108,41 @@ interface SampleUI extends BasePresenter.Ui {
 
 ```java
 public class SamplePresenter extends BasePresenter<SampleUi> {
-
-  @Override public void initialize() {
-    super.initialize();
-  }
-
-  @Override public void resume() {
-    super.resume();
-  }
-
-  @Override public void pause() {
-    super.pause();
-  }
-
-  @Override public void stop() {
-    super.stop();
-  }
-
-  @Override public void terminate() {
-    super.terminate();
-  } 
+  
 }
 
 ```
+
+When you needs hideLoading and showLoading methods to show some progress view on Ui you can use BasePresenterLoader.
+
+#### BasePresenterLoader.UI
+
+```java 
+
+interface SampleUiLoader extends BasePresenterLoader.Ui {
+}
+
+```
+
+
+#### BasePresenterLoader
+
+```java
+public class SamplePresenterLoader extends BasePresenterLoader<SampleUiLoader> {
+  
+}
+
+```
+
+To understand when the lifecycle methods should be call take a look at the following table:
+
+| BasePresenter   | Activity       | Fragment           |
+| --------------- |----------------| -------------------|
+| ``start``  | ``onCreate``   | ``onViewCreated``  |
+| ``resume``      | ``onResume``   | ``onResume``       |
+| ``pause``       | ``onPause``    | ``onPause``        |
+| ``stop``       | ``onStop``    | ``onStop``        |
+| ``terminate``     | ``onDestroy``  | ``onDestroy``      |
 
 ## [Domain](https://github.com/erikcaffrey/Android-Toolkit-Base-Components/tree/master/base-components/src/main/java/erikjhordanrey/base_components/domain)
 

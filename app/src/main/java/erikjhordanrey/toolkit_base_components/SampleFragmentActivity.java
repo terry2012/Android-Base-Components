@@ -24,4 +24,14 @@ public class SampleFragmentActivity extends BaseFragmentActivity {
   @Override protected Fragment getFragmentInstance() {
     return SampleFragment.newInstance();
   }
+
+  //Optional
+  @Override protected int getLayoutResId() {
+    return super.getLayoutResId();
+  }
+
+  //Optional
+  @Override protected Integer getContainerId() {
+    return super.getContainerId();
+  }
 }

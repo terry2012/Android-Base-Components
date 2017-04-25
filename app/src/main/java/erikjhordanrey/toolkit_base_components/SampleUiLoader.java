@@ -18,6 +18,5 @@ package erikjhordanrey.toolkit_base_components;
 
 import erikjhordanrey.base_components.view.BasePresenterLoader;
 
-interface SampleViewLoader extends BasePresenterLoader.Ui {
-
+interface SampleUiLoader extends BasePresenterLoader.Ui {
 }

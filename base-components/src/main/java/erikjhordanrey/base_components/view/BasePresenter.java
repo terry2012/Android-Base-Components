@@ -34,7 +34,7 @@ public abstract class BasePresenter<V extends Presenter.Ui> implements Presenter
     return view != null && view.get() != null;
   }
 
-  @Override public void initialize() {
+  @Override public void start() {
 
   }
 

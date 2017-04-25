@@ -44,26 +44,26 @@ public abstract class BaseFragment extends Fragment implements Presenter.Ui {
 
   @Override public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
-    initializePresenter();
-    initializeFragment(view);
+    initPresenter();
+    initFragment(view);
   }
 
   /**
    * Called immediately after onCreateView(LayoutInflater, ViewGroup, Bundle) has returned
-   * Override this method to configure your fragment or initialize views.
+   * Override this method to configure your fragment or start views.
    *
    * @param view The Ui returned by {@link #onCreateView(LayoutInflater, ViewGroup, Bundle)}.
    */
 
-  protected void initializeFragment(@NonNull View view) {
+  protected void initFragment(@NonNull View view) {
 
   }
 
   /**
-   * Called before to initialize all the presenter instances linked to the component lifecycle.
+   * Called before to start all the presenter instances linked to the component lifecycle.
    * Override this method to configure your presenter with extra data if needed.
    */
-  protected void initializePresenter() {
+  protected void initPresenter() {
 
   }
 

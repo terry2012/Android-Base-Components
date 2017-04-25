@@ -30,8 +30,8 @@ public class SampleBaseButterKnifeFragment extends BaseFragment {
     return R.layout.sample_activity;
   }
 
-  @Override protected void initializeFragment(@NonNull View view) {
-    super.initializeFragment(view);
+  @Override protected void initFragment(@NonNull View view) {
+    super.initFragment(view);
     unbinder = ButterKnife.bind(this, view);
   }
 
