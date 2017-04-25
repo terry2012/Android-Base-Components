@@ -4,11 +4,12 @@ Base Components library are a set of utilities used on current android developme
 
 These base components are the core used normally when you start to develop an android application working with the following stack:
 
-#### Principles
+#### Principles & Patterns
 
-* **Model View Presenter**
 * **Clean Architecture**
 * **S.O.L.I.D**
+* **Model View Presenter**
+* **Navigator**
 
 #### Libraries
 
