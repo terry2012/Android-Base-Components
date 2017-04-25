@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-
 package erikjhordanrey.base_components.domain.usecase;
 
 import erikjhordanrey.base_components.executor.Executor;
@@ -36,8 +35,8 @@ public abstract class UseCase<T, P> {
     this.compositeDisposable = new CompositeDisposable();
   }
 
-  public void execute(P requestParams, DisposableObserver<T> disposableObserver) {
-    final Observable<T> observable = this.buildUseCaseObservable(requestParams)
+  public void execute(P parameters, DisposableObserver<T> disposableObserver) {
+    final Observable<T> observable = this.createObservable(parameters)
         .subscribeOn(Schedulers.from(executor))
         .observeOn(mainThread.getScheduler());
 
@@ -55,5 +54,5 @@ public abstract class UseCase<T, P> {
     compositeDisposable.add(observer);
   }
 
-  abstract Observable<T> buildUseCaseObservable(P requestParams);
+  abstract Observable<T> createObservable(P parameters);
 }

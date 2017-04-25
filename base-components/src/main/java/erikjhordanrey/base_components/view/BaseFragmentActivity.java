@@ -37,10 +37,9 @@ public abstract class BaseFragmentActivity extends BaseActivity {
 
   private void initializeFragment() {
     final FragmentManager fragmentManager = getSupportFragmentManager();
-    final int defaultContainer = R.id.container;
-    Integer containerId = getContainerId();
-    if (containerId == null) {
-      containerId = defaultContainer;
+    Integer containerId = R.id.container;
+    if (getContainerId() != null) {
+      containerId = getContainerId();
     }
     fragment = fragmentManager.findFragmentById(containerId);
     if (fragment == null) {
