@@ -1,8 +1,6 @@
 # Android Base Components
 
-Base Components library are a set of utilities used on current android development.
-
-These base components are the core used normally when you start to develop an android application working with the following stack:
+Base Components library are a set of base classes core and utilities used each time you do start a new android application working with the following stack:
 
 #### Principles & Patterns
 
@@ -20,6 +18,43 @@ These base components are the core used normally when you start to develop an an
 * **Dagger 2**
 * **RxJava & Rx Android**
 
+**Note:** You can use just the components necessary that you need to solve your problems, It is not mandatory to use all.
+
+
+Add it to your project
+----------------------
+
+Base Components Library is in Progress but you can test it using SNAPSHOT VERSION.
+
+Include the library in your ``Root build.gradle``
+
+```groovy
+repositories {
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+  }
+```
+
+Include the library in your ``build.gradle``
+
+```groovy
+dependencies{
+    compile 'com.github.erikcaffrey:base-components:1.0.0-SNAPSHOT'
+}
+```
+
+or to your ``pom.xml`` if you are using Maven
+
+```xml
+<dependency>
+  <groupId>com.github.erikcaffrey</groupId>
+  <artifactId>base-components</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <type>aar</type>
+</dependency>
+
+```
+
+
 ### The project is divided in different modules 
 
 * Data
@@ -29,7 +64,6 @@ These base components are the core used normally when you start to develop an an
 * Navigation
 * View
 
-**Note:** You can use just the components necessary that you need to solve your problems, It is not mandatory to use all.
 
 # Modules
 
