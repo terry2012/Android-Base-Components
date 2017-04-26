@@ -35,6 +35,7 @@ if (JavaVersion.current().isJava8Compatible()) {
     source 'src'
     include '**/*.java'
     exclude '**/gen/**'
+    exclude 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'
 
     classpath = files()
   }
