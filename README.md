@@ -1,4 +1,4 @@
-# Android Base Components
+# Android Base Components  [![Build Status](https://travis-ci.org/erikcaffrey/Android-Base-Components.svg?branch=master)](https://travis-ci.org/erikcaffrey/Android-Base-Components)
 
 Base Components library are a set of base classes core and utilities used each time you do start a new android application working with the following stack:
 
@@ -7,7 +7,7 @@ Base Components library are a set of base classes core and utilities used each t
 * **Clean Architecture**
 * **S.O.L.I.D**
 * **Model View Presenter**
-* **Navigator**
+* **Software Design Patterns**
 
 #### Libraries
 
