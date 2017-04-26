@@ -32,7 +32,7 @@ public abstract class NavigatorActivity implements NavigatorTarget {
   @Override public void onNavigate() {
     Intent intent = onIntentNavigator(context);
     Bundle activityOptions = onIntentNavigatorOptions();
-    if (activityOptions != null && isEqualsOrMajorToJellyBean()) {
+    if (isEqualsOrMajorToJellyBean() && activityOptions != null) {
       context.startActivity(intent, activityOptions);
     } else {
       context.startActivity(intent);
