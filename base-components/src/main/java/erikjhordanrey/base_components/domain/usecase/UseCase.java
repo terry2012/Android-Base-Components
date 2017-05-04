@@ -25,34 +25,41 @@ import io.reactivex.schedulers.Schedulers;
 
 public abstract class UseCase<T, P> {
 
-  private final Executor executor;
-  private final MainThread mainThread;
-  private final CompositeDisposable compositeDisposable;
-
-  public UseCase(Executor executor, MainThread mainThread) {
-    this.executor = executor;
-    this.mainThread = mainThread;
-    this.compositeDisposable = new CompositeDisposable();
-  }
+  private Executor executor;
+  private MainThread mainThread;
+  private CompositeDisposable disposable;
 
   public void execute(P parameters, DisposableObserver<T> disposableObserver) {
     final Observable<T> observable = this.createObservable(parameters)
         .subscribeOn(Schedulers.from(executor))
         .observeOn(mainThread.getScheduler());
 
-    addDisposable(observable, disposableObserver);
+      addDisposable(observable, disposableObserver);
+
+  }
+
+  public void addExecutor(Executor executor) {
+    this.executor = executor;
+  }
+
+  public void addUiThread(MainThread mainThread) {
+    this.mainThread = mainThread;
+  }
+
+  public void addCompositeDisposable(CompositeDisposable disposable) {
+    this.disposable = disposable;
   }
 
   public void dispose() {
-    if (!compositeDisposable.isDisposed()) {
-      compositeDisposable.dispose();
+    if (!disposable.isDisposed()) {
+      disposable.dispose();
     }
   }
 
   private void addDisposable(Observable<T> observable, DisposableObserver<T> disposableObserver) {
     DisposableObserver observer = observable.subscribeWith(disposableObserver);
-    compositeDisposable.add(observer);
+    disposable.add(observer);
   }
 
-  abstract Observable<T> createObservable(P parameters);
+  public abstract Observable<T> createObservable(P parameters);
 }

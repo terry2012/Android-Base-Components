@@ -35,8 +35,10 @@ public class SampleBaseButterKnifeFragment extends BaseFragment {
     unbinder = ButterKnife.bind(this, view);
   }
 
-  @Override public void onDestroy() {
-    super.onDestroy();
-    unbinder.unbind();
+  @Override public void onDestroyView() {
+    if (unbinder != null) {
+      unbinder.unbind();
+    }
+    super.onDestroyView();
   }
 }
