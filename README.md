@@ -1,4 +1,5 @@
-# Android Base Components
+# Android Base Components (work-in-progress 👷🔧️👷‍♀️⛏)
+
 
 Base Components library are a set of base classes core and utilities used each time you do start a new android application working with the following stack:
 
