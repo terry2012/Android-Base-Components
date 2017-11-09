@@ -30,7 +30,7 @@ import retrofit2.Response;
     this.baseRetrofitConfig = baseRetrofitConfig;
   }
 
-  <S> S getService() {
+  public <S> S getService() {
     return (S) baseRetrofitConfig.getRetrofit().create(getServiceClass());
   }
 
