@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-//apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'
+apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'
 
 android {
 
@@ -27,15 +27,15 @@ android {
 
 dependencies {
 
-  compile supportDependencies.appCompat
-  compile supportDependencies.design
+  implementation supportDependencies.appCompat
+  implementation supportDependencies.design
 
-  compile rxDependencies.rxJava
-  compile rxDependencies.rxAndroid
+  implementation rxDependencies.rxJava
+  implementation rxDependencies.rxAndroid
 
-  compile squareDependencies.retrofit
-  compile squareDependencies.gsonConverter
-  compile squareDependencies.okHttp
-  compile squareDependencies.loggingInterceptor
+  implementation squareDependencies.retrofit
+  implementation squareDependencies.gsonConverter
+  implementation squareDependencies.okHttp
+  implementation squareDependencies.loggingInterceptor
 
 }

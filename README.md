@@ -25,21 +25,9 @@ Base Components library are a set of base classes core and utilities used each t
 Add it to your project
 ----------------------
 
-Base Components Library is in Progress but you can test it using SNAPSHOT VERSION.
-
-Include the library in your ``Root build.gradle``
-
-```groovy
-repositories {
-    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
-  }
-```
-
-Include the library in your ``build.gradle``
-
 ```groovy
 dependencies{
-    compile 'com.github.erikcaffrey:base-components:1.0.0-SNAPSHOT'
+    compile 'com.github.erikcaffrey:base-components:1.0.1'
 }
 ```
 
@@ -49,7 +37,7 @@ or to your ``pom.xml`` if you are using Maven
 <dependency>
   <groupId>com.github.erikcaffrey</groupId>
   <artifactId>base-components</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.1</version>
   <type>aar</type>
 </dependency>
 

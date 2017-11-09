@@ -26,14 +26,17 @@ android {
 
 dependencies {
 
-  compile supportDependencies.appCompat
-  compile supportDependencies.design
+  implementation supportDependencies.appCompat
+  implementation supportDependencies.design
 
-  compile             butterknife
+  implementation             butterknife
   annotationProcessor butterknifeCompiler
 
-  compile project(":base-components")
+  implementation rxDependencies.rxJava
+  implementation rxDependencies.rxAndroid
 
-  //compile 'com.github.erikcaffrey:base-components:1.0.0-SNAPSHOT'
+  implementation project(":base-components")
+
+  //implementation 'com.github.erikcaffrey:base-components:1.0.1'
 
 }
