@@ -27,7 +27,7 @@ Add it to your project
 
 ```groovy
 dependencies{
-    compile 'com.github.erikcaffrey:base-components:1.0.1'
+    compile 'com.github.erikcaffrey:base-components:1.0.2'
 }
 ```
 

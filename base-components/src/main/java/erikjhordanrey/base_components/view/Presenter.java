@@ -18,7 +18,7 @@ package erikjhordanrey.base_components.view;
 
 import android.support.annotation.NonNull;
 
-interface Presenter<V> {
+public interface Presenter<V> {
 
   void setUi(@NonNull V view);
 
